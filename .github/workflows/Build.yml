@@ -5,6 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
+
+      - name: Set up JDK
+        uses: action/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Build the project
+        run: ./gradlew assemble
+
       - name: Build the app
         run: ./gradlew build

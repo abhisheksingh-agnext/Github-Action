@@ -1,8 +1,9 @@
-package com.agnext.univerialapp.network.Response
+package com.agnext.githubaction.network.response
 
-import com.agnext.univerialapp.AppStates.USER_ERROR
-import com.agnext.univerialapp.AppStates.USER_LOADING
-import com.agnext.univerialapp.AppStates.USER_SUCCESS
+import com.agnext.githubaction.AppStates.USER_ERROR
+import com.agnext.githubaction.AppStates.USER_LOADING
+import com.agnext.githubaction.AppStates.USER_SUCCESS
+
 
 data class Resource<out T>(val status: String, val data: T?, val message: String?) {
     companion object {
